@@ -1,0 +1,10 @@
+it:
+  UserRestrictedBlogTree:
+    PLURALNAME: "Alberi con permessi utente"
+    SINGULARNAME: "Albero con permessi utente"
+  UserRestrictedBlogHolder:
+    PLURALNAME: "Blog con permessi utente"
+    SINGULARNAME: "Blog con permessi utente"
+  UserRestrictedBlogEntry:
+    PLURALNAME: "Post con permessi utente"
+    SINGULARNAME: "Post con permessi utente"

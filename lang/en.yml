@@ -1,0 +1,10 @@
+en:
+  UserRestrictedBlogTree:
+    PLURALNAME: "Users restrictes tree"
+    SINGULARNAME: "User restrictes tree"
+  UserRestrictedBlogHolder:
+    PLURALNAME: "Users restrictes blog"
+    SINGULARNAME: "User restrictes blog"
+  UserRestrictedBlogEntry:
+    PLURALNAME: "Users restrictes post"
+    SINGULARNAME: "User restrictes post"
