@@ -27,7 +27,7 @@ class UserRestrictedBlogTree extends BlogTree {
      * Only the Administrator can edit every tree
      */
     function canEdit($member = null) {
-        $this->checkBlogTreePermissions();
+        return $this->checkBlogTreePermissions();
     }
     
 }
