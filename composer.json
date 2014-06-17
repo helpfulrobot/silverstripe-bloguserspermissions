@@ -1,8 +1,8 @@
 {
     "name": "zirak/blog-users-permissions",
-    "description": "Management of user permissions to a blog",
+    "description": "Management of user permissions to a blog.",
     "type": "silverstripe-module",
-    "keywords": ["silverstripe", "blog", "users", "permissions"],
+    "keywords": ["silverstripe", "blog", "users", "permissions", "user blog", "blog permission"],
     "authors": [
         {"name": "Daniele Manassero - Zirak"},
         {"email": "daniele.manassero@zirak.it"}
