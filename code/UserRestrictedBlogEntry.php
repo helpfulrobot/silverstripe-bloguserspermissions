@@ -9,7 +9,7 @@ class UserRestrictedBlogEntry extends BlogEntry {
     
     private static $allowed_children = array('UserRestrictedBlogEntry');
     
-    private static $icon = "blogUsersPermissions/images/blogpage-file.png";
+    private static $icon = "blog-users-permissions/images/blogpage-file.png";
     
     /*
      * This is an override of the populateDefaults() function in BlogEntry class

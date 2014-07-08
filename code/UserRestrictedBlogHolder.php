@@ -7,7 +7,7 @@
 
 class UserRestrictedBlogHolder extends BlogHolder {
     
-    private static $icon = "blogUsersPermissions/images/blogholder-file.png";
+    private static $icon = "blog-users-permissions/images/blogholder-file.png";
     
     private static $allowed_children = array(
 		'UserRestrictedBlogEntry'
@@ -41,23 +41,28 @@ class UserRestrictedBlogHolder extends BlogHolder {
      * @return boolean True if the current user can add posts in this blog.
      */
     function canAddChildren($member = null) {
-        $page_permission = false;
-        
-        $user_groups = Permission::groupList(Member::currentUser()->ID);
-        
-        foreach($this->EditorGroups() as $key => $group){
-            foreach($user_groups as $user_group){
-                if($user_group == $group->ID){
-                    $page_permission = true;
-                    break;
+        if(!Permission::check('ADMIN')){
+            
+            $page_permission = false;
+            $user_groups = Permission::groupList(Member::currentUser()->ID);
+            
+            foreach($this->EditorGroups() as $key => $group){
+                foreach($user_groups as $user_group){
+                    if($user_group == $group->ID){
+                        $page_permission = true;
+                        break;
+                    }
                 }
             }
-        }
-        
-        if(Permission::check('BLOGMANAGEMENT') && $page_permission){
-            return true;
+
+            if(Permission::check('BLOGMANAGEMENT') && $page_permission){
+                return true;
+            }else{
+                return false;
+            }
+            
         }else{
-            return false;
+            return true;
         }
     }
     
