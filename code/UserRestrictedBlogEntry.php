@@ -41,7 +41,7 @@ class UserRestrictedBlogEntry extends BlogEntry {
     /*
      * @return boolean True if the current user can create a post.
      */
-    function canCreate($member = null) {
+    public function canCreate($member = null) {
         if(Permission::check('BLOGMANAGEMENT')){
             return true;
         }else{
@@ -78,7 +78,7 @@ class UserRestrictedBlogEntry extends BlogEntry {
      * @return boolean True if the current user can edit this post.
      * Only the Administrator can edit every post, otherwise the user can edit only his posts.
      */
-    function canEdit($member = null) {
+    public function canEdit($member = null) {
         return $this->checkBlogEntryPermissions();
     }
     
@@ -86,7 +86,7 @@ class UserRestrictedBlogEntry extends BlogEntry {
      * @return boolean True if the current user can publish this post.
      * Only the Administrator can publish every post, otherwise the user can publish only his posts.
      */
-    function canPublish($member = null) {
+    public function canPublish($member = null) {
         return $this->checkBlogEntryPermissions();
     }
     
@@ -94,7 +94,7 @@ class UserRestrictedBlogEntry extends BlogEntry {
      * @return boolean True if the current user can delete this post.
      * Only the Administrator can delete every post, otherwise the user can delete only his posts.
      */
-    function canDelete($member = null) {
+    public function canDelete($member = null) {
         return $this->checkBlogEntryPermissions();
     }
     

@@ -30,7 +30,7 @@ class UserRestrictedBlogHolder extends BlogHolder {
      * @return boolean True if the current user can edit this blog.
      * Only the Administrator can edit every blog, otherwise the user can edit only his blog.
      */
-    function canEdit($member = null) {
+    public function canEdit($member = null) {
        return $this->checkBlogHolderPermissions();
     }
     
@@ -40,7 +40,7 @@ class UserRestrictedBlogHolder extends BlogHolder {
      * 
      * @return boolean True if the current user can add posts in this blog.
      */
-    function canAddChildren($member = null) {
+    public function canAddChildren($member = null) {
         if(!Permission::check('ADMIN')){
             
             $page_permission = false;
