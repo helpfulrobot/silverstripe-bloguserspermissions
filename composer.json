@@ -5,7 +5,7 @@
     "keywords": ["silverstripe", "blog", "users", "permissions", "user blog", "blog permission"],
     "authors": [
         {"name": "Daniele Manassero - Zirak"},
-        {"email": "daniele.manassero@zirak.it"}
+        {"email": "daniele.manassero@gmail.com"}
     ],
     "require": {
         "silverstripe/framework": "3.1.*",
