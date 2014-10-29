@@ -7,6 +7,10 @@
 
 class UserRestrictedBlogEntry extends BlogEntry {
     
+    private static $has_one = array(
+        'Attachment' => 'File'
+    );
+    
     private static $allowed_children = array('UserRestrictedBlogEntry');
     
     private static $icon = "blog-users-permissions/images/blogpage-file.png";
@@ -35,6 +39,15 @@ class UserRestrictedBlogEntry extends BlogEntry {
     public function getCMSFields() {
         $fields = parent::getCMSFields();
         $fields->makeFieldReadonly('Author');
+        
+        $fields->addFieldToTab(
+            'Root.Main', 
+            $attached = new UploadField('Attachment'),
+            'Content'
+        );
+        $attached->setFolderName('Uploads/BlogAttached');
+        $attached->setAllowedExtensions(array('pdf', 'doc', 'docx', 'csv', 'ppt', 'pptx', 'xls', 'xlsx', 'odt', 'ods'));
+        
         return $fields;
     }
     

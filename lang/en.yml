@@ -8,3 +8,4 @@ en:
   UserRestrictedBlogEntry:
     PLURALNAME: "Restrictes post"
     SINGULARNAME: "Restrictes post"
+    db_Attachment: "Attachment"

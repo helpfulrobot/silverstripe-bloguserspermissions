@@ -8,3 +8,4 @@ it:
   UserRestrictedBlogEntry:
     PLURALNAME: "Post con permessi"
     SINGULARNAME: "Post con permessi"
+    db_Attachment: "Allegato"
