@@ -6,6 +6,6 @@ it:
     PLURALNAME: "Blog con permessi"
     SINGULARNAME: "Blog con permessi"
   UserRestrictedBlogEntry:
-    PLURALNAME: "Post con permessi"
-    SINGULARNAME: "Post con permessi"
+    PLURALNAME: "Posts"
+    SINGULARNAME: "Post"
     db_Attachment: "Allegato"

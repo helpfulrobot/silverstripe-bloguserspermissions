@@ -6,6 +6,6 @@ en:
     PLURALNAME: "Restrictes blog"
     SINGULARNAME: "Restrictes blog"
   UserRestrictedBlogEntry:
-    PLURALNAME: "Restrictes post"
-    SINGULARNAME: "Restrictes post"
+    PLURALNAME: "Posts"
+    SINGULARNAME: "Post"
     db_Attachment: "Attachment"
