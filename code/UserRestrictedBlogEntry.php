@@ -7,8 +7,14 @@
 
 class UserRestrictedBlogEntry extends BlogEntry {
     
-    private static $has_one = array(
-        'Attachment' => 'File'
+    private static $many_many = array(
+        'Attachments' => 'BlogEntryAttachments'
+    );
+    
+    private static $many_many_extraFields = array(
+        'Attachments' => array(
+            'SortOrder' => 'Int'
+        )
     );
     
     private static $allowed_children = array('UserRestrictedBlogEntry');
@@ -40,13 +46,10 @@ class UserRestrictedBlogEntry extends BlogEntry {
         $fields = parent::getCMSFields();
         $fields->makeFieldReadonly('Author');
         
-        $fields->addFieldToTab(
-            'Root.Main', 
-            $attached = new UploadField('Attachment'),
-            'Content'
-        );
-        $attached->setFolderName('Uploads/BlogAttached');
-        $attached->setAllowedExtensions(array('pdf', 'doc', 'docx', 'csv', 'ppt', 'pptx', 'xls', 'xlsx', 'odt', 'ods'));
+        $attachments = new SortableUploadField('Attachments');  //SortableUploadField class in in the "sortablefile" module
+        $attachments->setFolderName('Uploads/BlogAttachments');
+        $attachments->setAllowedExtensions(array('pdf', 'doc', 'docx', 'csv', 'ppt', 'pptx', 'xls', 'xlsx', 'odt', 'ods'));
+        $fields->addFieldToTab("Root.Main", $attachments, "Content");
         
         return $fields;
     }

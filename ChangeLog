@@ -1,5 +1,10 @@
 ChangeLog
 
+2.0
+
+Adding multiple upload of files in a UserRestrictedBlogEntry. Now "sortablefile" module is required.
+After the upgrade you need to do /dev/build, but you will lose the old attachments.
+
 1.0
 
 Initial release

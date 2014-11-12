@@ -10,6 +10,7 @@
     "require": {
         "silverstripe/framework": "3.1.*",
         "silverstripe/cms": "3.1.*",
-        "silverstripe/blog": "*"
+        "silverstripe/blog": "*",
+        "bummzack/sortablefile": "*"
     }
 }
